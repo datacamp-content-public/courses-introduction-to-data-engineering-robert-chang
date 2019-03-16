@@ -3,7 +3,7 @@ title: Insert title here
 key: 916367ae330aac6a7e38d6bdbe4ff426
 
 ---
-## Title Slide
+## Lesson 1:  Introduction to Data Engineering
 
 ```yaml
 type: "TitleSlide"
@@ -51,19 +51,50 @@ Unfortunately, in most of the news article out there nowadays, there is a strong
 
 
 ---
-## The Mental Model
+## BackTracking: From Tables To Warehouse
 
 ```yaml
-type: "FullSlide"
-key: "7aedc28d3e"
+type: "TwoColumns"
+key: "f63e9c7f7e"
 ```
 
 `@part1`
+```sql
+SELECT
+	*
+FROM
+	magical_table
+WHERE
+	ds = '{{ ds }}'
+```
 
+
+`@part2`
+![image](https://cdn-images-1.medium.com/max/2000/1*tcDY4JKmvgfR0x_x0gpS_Q.png)
 
 
 `@script`
+Most of you probably have the experience performing data analysis by manipulating data from a excel spreadsheet or querying from a SQL table, but have you ever wonder where these tables came from?
 
+Data Tables (like the ones on the left) typically do not magically appeared themselves. There are a lot of work that needs to happen for table to be cleaned, transformed, and make usable, as we have already mentioned in the previous slide "The Data Science Hierarchy of Needs". 
+
+But what exactly is the kind of work to goes into Data Engineering? In the later chapters, we will dive deep into various activities related to Data Engineering, but it is useful to start with the big picture so we can understand the mental model of Data Engineering.
+
+First of all, we need to collect data, and data can come from a wide variety of data sourcs, such as production database exports, user-initiated logs, and even just .csv files. 
+
+With all the data collected, we need to store them in a secure place where we can reuse them, this is what we often call "the data warehouse", a term that was coined in the 1970s by Computer Scientist Bill Inmon.
+
+However, we do not want to dump raw data into the warehouse, because they are not very useful. As a result, between transferring raw data to usable data to the data warehouse, we need to clean, transform, and massage the data - this process is what we called ETL - extract, transform, and load. A big part of Data Engineering is about how to do ETL at scale with best practices. 
+
+Finally, once the data is stored in the data warehouse, it can then be used for a variety of purposes: 
+
+For example, useful tables that keep track of key business metrics can be used for business intelligence of dashboards.
+
+Similarly, logging of users actions, when overlay with experiment assignment data, can be used to automatically calculate user engagement statistics between control and treatment group. All this can be used to build an experimentation platform. 
+
+Last but not least, the same data can be used to construct a training set that will be used to trained a Machine Learning Model.
+
+A big challenge of data-driven company is how to organize such data warehouse so the same data can be applied to a wide variety of different use cases.
 
 
 ---

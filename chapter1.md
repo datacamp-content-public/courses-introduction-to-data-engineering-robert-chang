@@ -43,7 +43,7 @@ This is an example exercise.
 
 ---
 
-## Insert exercise title here
+## Lesson 1:  Introduction to Data Engineering
 
 ```yaml
 type: VideoExercise
