@@ -21,80 +21,146 @@ title: Data Scientist
 
 
 ---
-## The Evolution of Analytics Capability
+## Maslow's Hierarchy of Needs
+
+```yaml
+type: "FullSlide"
+key: "9375f0e565"
+disable_transition: false
+```
+
+`@part1`
+![image](https://assets.datacamp.com/production/repositories/4780/datasets/1143cbe10f3f203a68bb1a6d3fc035fc9e8d4a12/maslow.png)
+
+
+`@citations`
+https://www.simplypsychology.org/maslow.html
+
+
+`@script`
+
+
+
+---
+## Collect
 
 ```yaml
 type: "FullSlide"
 key: "d5e156f124"
+hide_title: false
+code_zoom: 100
 ```
 
 `@part1`
-![image](https://cdn-images-1.medium.com/max/1600/1*7IMev5xslc9FLxr9hHhpFw.png)
+![image](https://assets.datacamp.com/production/repositories/4780/datasets/e429a3ca656f4b11938c4afb6778f3448aedc767/pyramid_1.png)
+
+
+`@citations`
+From AI Hierarchy of Needs, authored by Monica Rogati
 
 
 `@script`
-Have you heard of Abraham Maslow's famous Hierarchy of Needs? In this theory, he laid out the progression of human needs, and argued that in order for the motivation for the next level to occur, the previous level of needs must be satisfied first before moving on to the next.
 
-In 2017, Monica Rogati, an early LinkedIn data scientist, coined the term "The Data Science Hierarchy of Needs", where she argued that analytics capabilities are built layers upon layers, and just like Maslow's theory, one cannot move to the next stage of analytics until the foundation has been built. 
-
-So what are the layers? The triangle chart below shows you the steps a typical company needs to go through to transform itself from a great company to a great data-driven company. 
-
-First, at the bottommost layer, we need to start by building the infrastructure to collect data, such as logging and instrumentation. We will discuss the concept of instrumentation in details in later exercise, but think of it as a mechanism to understand how user interacts with the product (e.g. impression, clicks, page bounce, and more).
-
-Once the raw data is stored, we need to move and and store these raw data in a secure place so we can use them in the future. In later chapter, we will talked about some of the most popular cloud service providers to explain how data is stored in modern data data-driven companies.
-
-Going to the next level, we need to transform and clean the raw data in order to make them more usable. In later chapter, we will discuss the concept of ETL (Extract, Transform, and Load), which is a core concept for building a data warehouse.
-
-With all this hard work, we can then finally start doing higher-valued work such as analytics, metrics tracking, and building dashboards. Beyond that, mature data-driven companies also use the same data to build experimentation platform to perform A/B test, or use them to construct training data for Machine Learning Model.
-
-Unfortunately, in most of the news article out there nowadays, there is a strong emphasis on work that is happening in the top of the pyramid, rather than all the other foundational work that are less glamorous. However, it is important to have this mental model in mind. Without the foundation, analytics is not possible.
 
 
 ---
-## BackTracking: From Tables To Warehouse
+## Move / Store
 
 ```yaml
-type: "TwoColumns"
-key: "f63e9c7f7e"
+type: "FullSlide"
+key: "bfe3d88cda"
 ```
 
 `@part1`
-```sql
-SELECT
-	*
-FROM
-	magical_table
-WHERE
-	ds = '{{ ds }}'
-```
+![image](https://assets.datacamp.com/production/repositories/4780/datasets/2f6d38e197538fdef5db5e720d5fb180aafa5d87/pyramid_2.png)
 
 
-`@part2`
-![image](https://cdn-images-1.medium.com/max/2000/1*tcDY4JKmvgfR0x_x0gpS_Q.png)
+`@citations`
+From AI Hierarchy of Needs, authored by Monica Rogati
 
 
 `@script`
-Most of you probably have the experience performing data analysis by manipulating data from a excel spreadsheet or querying from a SQL table, but have you ever wonder where these tables came from?
 
-Data Tables (like the ones on the left) typically do not magically appeared themselves. There are a lot of work that needs to happen for table to be cleaned, transformed, and make usable, as we have already mentioned in the previous slide "The Data Science Hierarchy of Needs". 
 
-But what exactly is the kind of work to goes into Data Engineering? In the later chapters, we will dive deep into various activities related to Data Engineering, but it is useful to start with the big picture so we can understand the mental model of Data Engineering.
 
-First of all, we need to collect data, and data can come from a wide variety of data sourcs, such as production database exports, user-initiated logs, and even just .csv files. 
+---
+## Explore / Transform
 
-With all the data collected, we need to store them in a secure place where we can reuse them, this is what we often call "the data warehouse", a term that was coined in the 1970s by Computer Scientist Bill Inmon.
+```yaml
+type: "FullSlide"
+key: "4b9113f00c"
+```
 
-However, we do not want to dump raw data into the warehouse, because they are not very useful. As a result, between transferring raw data to usable data to the data warehouse, we need to clean, transform, and massage the data - this process is what we called ETL - extract, transform, and load. A big part of Data Engineering is about how to do ETL at scale with best practices. 
+`@part1`
+![image](https://assets.datacamp.com/production/repositories/4780/datasets/f43a7ca3a346f72f7c97132cabf09c1d2e96067a/pyramid_3.png)
 
-Finally, once the data is stored in the data warehouse, it can then be used for a variety of purposes: 
 
-For example, useful tables that keep track of key business metrics can be used for business intelligence of dashboards.
+`@citations`
+From AI Hierarchy of Needs, authored by Monica Rogati
 
-Similarly, logging of users actions, when overlay with experiment assignment data, can be used to automatically calculate user engagement statistics between control and treatment group. All this can be used to build an experimentation platform. 
 
-Last but not least, the same data can be used to construct a training set that will be used to trained a Machine Learning Model.
+`@script`
 
-A big challenge of data-driven company is how to organize such data warehouse so the same data can be applied to a wide variety of different use cases.
+
+
+---
+## Aggregate / Label
+
+```yaml
+type: "FullSlide"
+key: "cf8eba60f1"
+```
+
+`@part1`
+![image](https://assets.datacamp.com/production/repositories/4780/datasets/49c264da1271ea2536acc58cdc27bac227d3e99e/pyramid_4.png)
+
+
+`@citations`
+From AI Hierarchy of Needs, authored by Monica Rogati
+
+
+`@script`
+
+
+
+---
+## Learn / Optimize
+
+```yaml
+type: "FullSlide"
+key: "d83561ce07"
+```
+
+`@part1`
+![image](https://assets.datacamp.com/production/repositories/4780/datasets/e7e7b93549d8c12832f0ff73587371a5023324af/pyramid_5.png)
+
+
+`@citations`
+From AI Hierarchy of Needs, authored by Monica Rogati
+
+
+`@script`
+
+
+
+---
+## The Full Picture
+
+```yaml
+type: "FullSlide"
+key: "accdd03b2c"
+```
+
+`@part1`
+![image](https://assets.datacamp.com/production/repositories/4780/datasets/102db3777ab3adb896e8c9fffb5030239e9d7781/pyramid_final.png)
+
+
+`@citations`
+From AI Hierarchy of Needs, authored by Monica Rogati
+
+
+`@script`
+
 
 
 ---
