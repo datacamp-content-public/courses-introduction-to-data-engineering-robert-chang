@@ -27,6 +27,7 @@ title: Data Scientist
 type: "FullSlide"
 key: "9375f0e565"
 disable_transition: false
+code_zoom: 100
 ```
 
 `@part1`
